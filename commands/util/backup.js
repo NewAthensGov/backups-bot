@@ -17,10 +17,6 @@ module.exports = {
 	
      	       return interaction.reply('Backup created! Here is your ID: `'+backupData.id+'`! Use `'+config.prefix+'load-backup '+backupData.id+'` to load the backup on another server!');
 
-    	    }).catch(() => {
-
-     	       return interaction.reply(':x: An error occurred, please check if the bot is administrator!');
-
-    	    });
+    	    };
 	},
 };
