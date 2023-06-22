@@ -5,7 +5,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('backup')
 		.setDescription('Creates a server backup file'),
-	async execute(interaction) {
+        exports.run = async (client, message, args) => {
    		// exports.run = async (client, message, args) => {
     
      	   // If the member doesn't have enough permissions
