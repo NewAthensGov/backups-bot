@@ -13,7 +13,7 @@ module.exports = {
      	   //    return message.channel.send(':x: You need to have the manage messages permissions to create a backup in this server.');
      	   //}
 
-     	   backup.create(message.guild).then((backupData) => {
+     	   backup.create(config.guildId).then((backupData) => {
 	
      	       return message.channel.send('Backup created! Here is your ID: `'+backupData.id+'`! Use `'+config.prefix+'load-backup '+backupData.id+'` to load the backup on another server!');
 
