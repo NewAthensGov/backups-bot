@@ -6,7 +6,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('backup')
 		.setDescription('Creates a server backup file'),
-        async execute(client, message, args) {
+        async execute(interaction, client, message, args) {
     
      	   // If the member doesn't have enough permissions
      	   //if(!message.member.hasPermission('MANAGE_MESSAGES')){
@@ -15,11 +15,11 @@ module.exports = {
 
      	   backup.create(config.guildId).then((backupData) => {
 	
-     	       return message.channel.send('Backup created! Here is your ID: `'+backupData.id+'`! Use `'+config.prefix+'load-backup '+backupData.id+'` to load the backup on another server!');
+     	       return interaction.reply('Backup created! Here is your ID: `'+backupData.id+'`! Use `'+config.prefix+'load-backup '+backupData.id+'` to load the backup on another server!');
 
     	    }).catch(() => {
 
-     	       return message.channel.send(':x: An error occurred, please check if the bot is administrator!');
+     	       return interaction.reply(':x: An error occurred, please check if the bot is administrator!');
 
     	    });
 	},
