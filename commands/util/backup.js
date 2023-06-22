@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const backup = require('discord-backup');
 const config = require('../../config.json');
 
 module.exports = {
