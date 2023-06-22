@@ -1,0 +1,5 @@
+cp ../config.json .
+npm init -y
+npm install
+npm audit fix
+node deploy-commands.js
